@@ -1,0 +1,22 @@
+class Solution {
+    public String reverseString(String s) {
+        //iterate through string, put each char in stack
+        // string bilder append woth pop
+        //return to string
+        
+        Stack<Character> stack = new Stack<>();
+        StringBuilder sb = new StringBuilder();
+        
+        for(int i=0;i<s.length();i++){
+            stack.push(s.charAt(i));
+        }
+        for(int j=0;j<s.length();j++){
+            sb.append(stack.pop());
+        }
+        
+        String swapString = sb.toString();
+        
+        return swapString;
+        
+    }
+}
